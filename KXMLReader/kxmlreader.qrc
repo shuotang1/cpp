@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/check.png</file>
+        <file>icons/exe.png</file>
+        <file>icons/csv.png</file>
+        <file>icons/add.png</file>
+        <file>icons/runoutput.png</file>
+        <file>icons/download.png</file>
+        <file>icons/folder.png</file>
+        <file>icons/open_folder.png</file>
+        <file>icons/feedback.png</file>
+        <file>icons/total.png</file>
+        <file>icons/vs.png</file>
+        <file>icons/blackTotal.png</file>
+        <file>icons/blackvs.png</file>
+        <file>icons/blackspec.png</file>
+        <file>icons/spec.png</file>
+        <file>icons/blackcheck.png</file>
+        <file>icons/blackrun.png</file>
+        <file>icons/run.png</file>
+        <file>icons/blackcopy.png</file>
+        <file>icons/copy.png</file>
+        <file>icons/dirvs.png</file>
+        <file>icons/blackdirvs.png</file>
+        <file>icons/defaultDirPath.png</file>
+        <file>icons/blackStore.png</file>
+        <file>icons/store.png</file>
+        <file>icons/organize.png</file>
+        <file>icons/subStore.png</file>
+        <file>icons/user.png</file>
+        <file>icons/main.png</file>
+        <file>icons/del.png</file>
+        <file>icons/blackfile.png</file>
+        <file>icons/file.png</file>
+        <file>icons/next.png</file>
+        <file>icons/pre.png</file>
+        <file>icons/search.png</file>
+        <file>icons/close.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,19 @@
+REM README.md : REM在bat脚本中会注释掉，其中下方地址第一个是远程主机文件地址，","后的地址是../debug/Debug/env后的下载地址
+
+REM bat.7z : python脚本，内含代码查看器高亮处理，Git模块的相关内容
+//10.226.19.27/SchoolClassCode/codingTool/bat.7z,bat.7z
+
+REM jplag.7z : jplag查重所需模块
+//10.226.19.27/SchoolClassCode/codingTool/jplag.7z,jplag.7z
+
+REM lang.7z : 中文语言所需模块
+//10.226.19.27/SchoolClassCode/codingTool/lang.7z,lang.7z
+
+REM qt.7z : qt环境模块
+//10.226.19.27/SchoolClassCode/codingTool/qt.7z,qt.7z
+
+REM config.7z(必须） : 程序启动时，需要查看该配置模块，来决定加入哪些模块
+//10.226.19.27/SchoolClassCode/codingTool/config.7z,config.7z
+
+REM CPPcheck.7z : 错误检查模块
+//10.226.19.27/SchoolClassCode/codingTool/CPPcheck.7z,CPPcheck.7z
