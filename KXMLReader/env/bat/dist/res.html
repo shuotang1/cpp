@@ -1,0 +1,195 @@
+<style>body {background-color: #000000; color: #ffffff; font-size: 10pt;}pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #ffffff; }
+.highlight .c { color: #6A9955; font-style: italic } /* Comment */
+.highlight .k { color: #00FFFF; font-weight: bold } /* Keyword */
+.highlight .n { color: #ffffff } /* Name */
+.highlight .o { color: #FFFFFF } /* Operator */
+.highlight .ch { color: #6A9955; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #6A9955; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #6A9955; font-style: italic } /* Comment.Preproc */
+.highlight .cpf { color: #6A9955; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #6A9955; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #6A9955; font-style: italic } /* Comment.Special */
+.highlight .kc { color: #00FFFF; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #00FFFF; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #00FFFF; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #00FFFF; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #00FFFF; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #00FFFF; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #DCDCDC } /* Literal.Number */
+.highlight .s { color: #FFA500 } /* Literal.String */
+.highlight .na { color: #ffffff } /* Name.Attribute */
+.highlight .nb { color: #ffffff } /* Name.Builtin */
+.highlight .nc { color: #00FF00; font-weight: bold } /* Name.Class */
+.highlight .no { color: #ffffff } /* Name.Constant */
+.highlight .nd { color: #ffffff } /* Name.Decorator */
+.highlight .ni { color: #ffffff } /* Name.Entity */
+.highlight .ne { color: #ffffff } /* Name.Exception */
+.highlight .nf { color: #FFFF00 } /* Name.Function */
+.highlight .nl { color: #ffffff } /* Name.Label */
+.highlight .nn { color: #ffffff } /* Name.Namespace */
+.highlight .nx { color: #ffffff } /* Name.Other */
+.highlight .py { color: #ffffff } /* Name.Property */
+.highlight .nt { color: #ffffff } /* Name.Tag */
+.highlight .nv { color: #ffffff } /* Name.Variable */
+.highlight .ow { color: #FFFFFF } /* Operator.Word */
+.highlight .mb { color: #DCDCDC } /* Literal.Number.Bin */
+.highlight .mf { color: #DCDCDC } /* Literal.Number.Float */
+.highlight .mh { color: #DCDCDC } /* Literal.Number.Hex */
+.highlight .mi { color: #DCDCDC } /* Literal.Number.Integer */
+.highlight .mo { color: #DCDCDC } /* Literal.Number.Oct */
+.highlight .sa { color: #FFA500 } /* Literal.String.Affix */
+.highlight .sb { color: #FFA500 } /* Literal.String.Backtick */
+.highlight .sc { color: #FFA500 } /* Literal.String.Char */
+.highlight .dl { color: #FFA500 } /* Literal.String.Delimiter */
+.highlight .sd { color: #FFA500 } /* Literal.String.Doc */
+.highlight .s2 { color: #FFA500 } /* Literal.String.Double */
+.highlight .se { color: #FFA500 } /* Literal.String.Escape */
+.highlight .sh { color: #FFA500 } /* Literal.String.Heredoc */
+.highlight .si { color: #FFA500 } /* Literal.String.Interpol */
+.highlight .sx { color: #FFA500 } /* Literal.String.Other */
+.highlight .sr { color: #FFA500 } /* Literal.String.Regex */
+.highlight .s1 { color: #FFA500 } /* Literal.String.Single */
+.highlight .ss { color: #FFA500 } /* Literal.String.Symbol */
+.highlight .bp { color: #ffffff } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #FFFF00 } /* Name.Function.Magic */
+.highlight .vc { color: #ffffff } /* Name.Variable.Class */
+.highlight .vg { color: #ffffff } /* Name.Variable.Global */
+.highlight .vi { color: #ffffff } /* Name.Variable.Instance */
+.highlight .vm { color: #ffffff } /* Name.Variable.Magic */
+.highlight .il { color: #DCDCDC } /* Literal.Number.Integer.Long */</style><div class="highlight" style="background: #ffffff; background-color:#000000; color:#ffffff;"><pre style="line-height: 125%;"><span></span>  <span style="color: #DCDCDC">1</span>  #<span style="color: #ffffff">include</span> <span style="color: #FFA500">&quot;KVector.h&quot;</span>
+  <span style="color: #DCDCDC">2</span>  
+  <span style="color: #DCDCDC">3</span>  <span style="color: #6A9955; font-style: italic">// 默认构造函数</span>
+  <span style="color: #DCDCDC">4</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+  <span style="color: #DCDCDC">5</span>  <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">KVector</span>() <span style="color: #FFFFFF">:</span> <span style="color: #ffffff">array</span>(<span style="color: #00FFFF; font-weight: bold">nullptr</span>), <span style="color: #ffffff">capacity</span>(<span style="color: #DCDCDC">0</span>), <span style="color: #ffffff">size</span>(<span style="color: #DCDCDC">0</span>) {}	<span style="color: #6A9955; font-style: italic">//在构造函数的声明后使用冒号开始，用于对类的成员变量进行初始化。另一种方式使用赋值语句初始化</span>
+  <span style="color: #DCDCDC">6</span>  
+  <span style="color: #DCDCDC">7</span>  <span style="color: #6A9955; font-style: italic">//带有初始大小的构造函数</span>
+  <span style="color: #DCDCDC">8</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+  <span style="color: #DCDCDC">9</span>  <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">KVector</span>(<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">initialSize</span>) <span style="color: #FFFFFF">:</span> <span style="color: #ffffff">capacity</span>(<span style="color: #ffffff">initialSize</span>), <span style="color: #ffffff">size</span>(<span style="color: #DCDCDC">0</span>) {
+ <span style="color: #DCDCDC">10</span>  	<span style="color: #ffffff">array</span> <span style="color: #FFFFFF">=</span> <span style="color: #00FFFF; font-weight: bold">new</span> <span style="color: #ffffff">T</span>[<span style="color: #ffffff">capacity</span>];
+ <span style="color: #DCDCDC">11</span>  }
+ <span style="color: #DCDCDC">12</span>  
+ <span style="color: #DCDCDC">13</span>  <span style="color: #6A9955; font-style: italic">// 析构函数</span>
+ <span style="color: #DCDCDC">14</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">15</span>  <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::~</span><span style="color: #ffffff">KVector</span>() {
+ <span style="color: #DCDCDC">16</span>  	<span style="color: #00FFFF; font-weight: bold">delete</span>[] <span style="color: #ffffff">array</span>;
+ <span style="color: #DCDCDC">17</span>  }
+ <span style="color: #DCDCDC">18</span>  
+ <span style="color: #DCDCDC">19</span>  <span style="color: #6A9955; font-style: italic">// puch_back</span>
+ <span style="color: #DCDCDC">20</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">21</span>  <span style="color: #00FFFF; font-weight: bold">void</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">push_back</span>(<span style="color: #00FFFF; font-weight: bold">const</span> <span style="color: #ffffff">T</span><span style="color: #FFFFFF">&amp;</span> <span style="color: #ffffff">element</span>) {
+ <span style="color: #DCDCDC">22</span>      <span style="color: #00FFFF; font-weight: bold">if</span> (<span style="color: #ffffff">size</span> <span style="color: #FFFFFF">&gt;=</span> <span style="color: #ffffff">capacity</span>) {
+ <span style="color: #DCDCDC">23</span>          <span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">=</span> (<span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">==</span> <span style="color: #DCDCDC">0</span>) <span style="color: #FFFFFF">?</span> <span style="color: #DCDCDC">1</span> <span style="color: #FFFFFF">:</span> <span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">*</span> <span style="color: #DCDCDC">2</span>;
+ <span style="color: #DCDCDC">24</span>          <span style="color: #ffffff">T</span><span style="color: #FFFFFF">*</span> <span style="color: #ffffff">newArray</span> <span style="color: #FFFFFF">=</span> <span style="color: #00FFFF; font-weight: bold">new</span> <span style="color: #ffffff">T</span>[<span style="color: #ffffff">capacity</span>];
+ <span style="color: #DCDCDC">25</span>          <span style="color: #00FFFF; font-weight: bold">for</span> (<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">=</span> <span style="color: #DCDCDC">0</span>; <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">&lt;</span> <span style="color: #ffffff">size</span>; <span style="color: #FFFFFF">++</span><span style="color: #ffffff">i</span>) {
+ <span style="color: #DCDCDC">26</span>              <span style="color: #ffffff">newArray</span>[<span style="color: #ffffff">i</span>] <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">array</span>[<span style="color: #ffffff">i</span>];
+ <span style="color: #DCDCDC">27</span>          }
+ <span style="color: #DCDCDC">28</span>          <span style="color: #00FFFF; font-weight: bold">delete</span>[] <span style="color: #ffffff">array</span>;
+ <span style="color: #DCDCDC">29</span>          <span style="color: #ffffff">array</span> <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">newArray</span>;
+ <span style="color: #DCDCDC">30</span>      }
+ <span style="color: #DCDCDC">31</span>      <span style="color: #ffffff">array</span>[<span style="color: #ffffff">size</span><span style="color: #FFFFFF">++</span>] <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">element</span>;
+ <span style="color: #DCDCDC">32</span>  }
+ <span style="color: #DCDCDC">33</span>  
+ <span style="color: #DCDCDC">34</span>  <span style="color: #6A9955; font-style: italic">// []运算符重载</span>
+ <span style="color: #DCDCDC">35</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">36</span>  <span style="color: #ffffff">T</span><span style="color: #FFFFFF">&amp;</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #00FFFF; font-weight: bold">operator</span>[](<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">index</span>) {
+ <span style="color: #DCDCDC">37</span>      <span style="color: #00FFFF; font-weight: bold">if</span> (<span style="color: #ffffff">index</span> <span style="color: #FFFFFF">&gt;=</span> <span style="color: #ffffff">size</span>) {
+ <span style="color: #DCDCDC">38</span>          <span style="color: #00FFFF; font-weight: bold">throw</span> <span style="color: #ffffff">std</span><span style="color: #FFFFFF">::</span><span style="color: #ffffff">out_of_range</span>(<span style="color: #FFA500">&quot;Index out of range&quot;</span>);
+ <span style="color: #DCDCDC">39</span>      }
+ <span style="color: #DCDCDC">40</span>      <span style="color: #00FFFF; font-weight: bold">return</span> <span style="color: #ffffff">array</span>[<span style="color: #ffffff">index</span>];
+ <span style="color: #DCDCDC">41</span>  }
+ <span style="color: #DCDCDC">42</span>  
+ <span style="color: #DCDCDC">43</span>  <span style="color: #6A9955; font-style: italic">// at()函数</span>
+ <span style="color: #DCDCDC">44</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">45</span>  <span style="color: #ffffff">T</span><span style="color: #FFFFFF">&amp;</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">at</span>(<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">index</span>) {
+ <span style="color: #DCDCDC">46</span>      <span style="color: #00FFFF; font-weight: bold">return</span> (<span style="color: #FFFFFF">*</span><span style="color: #00FFFF; font-weight: bold">this</span>)[<span style="color: #ffffff">index</span>];  <span style="color: #6A9955; font-style: italic">//(*this) 表示当前对象的引用。在成员函数中，this 是一个指向当前对象的指针，通过解引用操作符 *，可以获得指向当前对象的引用。</span>
+ <span style="color: #DCDCDC">47</span>  }
+ <span style="color: #DCDCDC">48</span>  
+ <span style="color: #DCDCDC">49</span>  <span style="color: #6A9955; font-style: italic">// 返回数组当前大小</span>
+ <span style="color: #DCDCDC">50</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">51</span>  <span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">getSize</span>() <span style="color: #00FFFF; font-weight: bold">const</span> {
+ <span style="color: #DCDCDC">52</span>      <span style="color: #00FFFF; font-weight: bold">return</span> <span style="color: #ffffff">size</span>;
+ <span style="color: #DCDCDC">53</span>  }
+ <span style="color: #DCDCDC">54</span>  
+ <span style="color: #DCDCDC">55</span>  <span style="color: #6A9955; font-style: italic">// 判空</span>
+ <span style="color: #DCDCDC">56</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">57</span>  <span style="color: #00FFFF; font-weight: bold">bool</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">empty</span>() <span style="color: #00FFFF; font-weight: bold">const</span> {
+ <span style="color: #DCDCDC">58</span>      <span style="color: #00FFFF; font-weight: bold">return</span> <span style="color: #ffffff">size</span> <span style="color: #FFFFFF">==</span> <span style="color: #DCDCDC">0</span>;
+ <span style="color: #DCDCDC">59</span>  }
+ <span style="color: #DCDCDC">60</span>  
+ <span style="color: #DCDCDC">61</span>  <span style="color: #6A9955; font-style: italic">// 清空数组中的所有元素</span>
+ <span style="color: #DCDCDC">62</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">63</span>  <span style="color: #00FFFF; font-weight: bold">void</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">clear</span>() {
+ <span style="color: #DCDCDC">64</span>      <span style="color: #ffffff">size</span> <span style="color: #FFFFFF">=</span> <span style="color: #DCDCDC">0</span>;
+ <span style="color: #DCDCDC">65</span>  }
+ <span style="color: #DCDCDC">66</span>  
+ <span style="color: #DCDCDC">67</span>  <span style="color: #6A9955; font-style: italic">// 删除元素</span>
+ <span style="color: #DCDCDC">68</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">69</span>  <span style="color: #00FFFF; font-weight: bold">void</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">erase</span>(<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">index</span>) {
+ <span style="color: #DCDCDC">70</span>      <span style="color: #00FFFF; font-weight: bold">if</span> (<span style="color: #ffffff">index</span> <span style="color: #FFFFFF">&gt;=</span> <span style="color: #ffffff">size</span>) {
+ <span style="color: #DCDCDC">71</span>          <span style="color: #00FFFF; font-weight: bold">throw</span> <span style="color: #ffffff">std</span><span style="color: #FFFFFF">::</span><span style="color: #ffffff">out_of_range</span>(<span style="color: #FFA500">&quot;Index out of range&quot;</span>);
+ <span style="color: #DCDCDC">72</span>      }
+ <span style="color: #DCDCDC">73</span>      <span style="color: #00FFFF; font-weight: bold">for</span> (<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">index</span>; <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">&lt;</span> <span style="color: #ffffff">size</span> <span style="color: #FFFFFF">-</span> <span style="color: #DCDCDC">1</span>; <span style="color: #FFFFFF">++</span><span style="color: #ffffff">i</span>) {
+ <span style="color: #DCDCDC">74</span>          <span style="color: #ffffff">array</span>[<span style="color: #ffffff">i</span>] <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">array</span>[<span style="color: #ffffff">i</span> <span style="color: #FFFFFF">+</span> <span style="color: #DCDCDC">1</span>];
+ <span style="color: #DCDCDC">75</span>      }
+ <span style="color: #DCDCDC">76</span>      <span style="color: #FFFFFF">--</span><span style="color: #ffffff">size</span>;
+ <span style="color: #DCDCDC">77</span>  }
+ <span style="color: #DCDCDC">78</span>  
+ <span style="color: #DCDCDC">79</span>  
+ <span style="color: #DCDCDC">80</span>  <span style="color: #6A9955; font-style: italic">// 插入元素</span>
+ <span style="color: #DCDCDC">81</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+ <span style="color: #DCDCDC">82</span>  <span style="color: #00FFFF; font-weight: bold">void</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">insert</span>(<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">index</span>, <span style="color: #00FFFF; font-weight: bold">const</span> <span style="color: #ffffff">T</span><span style="color: #FFFFFF">&amp;</span> <span style="color: #ffffff">element</span>) {
+ <span style="color: #DCDCDC">83</span>      <span style="color: #00FFFF; font-weight: bold">if</span> (<span style="color: #ffffff">index</span> <span style="color: #FFFFFF">&gt;</span> <span style="color: #ffffff">size</span>) {
+ <span style="color: #DCDCDC">84</span>          <span style="color: #00FFFF; font-weight: bold">throw</span> <span style="color: #ffffff">std</span><span style="color: #FFFFFF">::</span><span style="color: #ffffff">out_of_range</span>(<span style="color: #FFA500">&quot;Index out of range&quot;</span>);
+ <span style="color: #DCDCDC">85</span>      }
+ <span style="color: #DCDCDC">86</span>      <span style="color: #00FFFF; font-weight: bold">if</span> (<span style="color: #ffffff">size</span> <span style="color: #FFFFFF">&gt;=</span> <span style="color: #ffffff">capacity</span>) {
+ <span style="color: #DCDCDC">87</span>          <span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">=</span> (<span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">==</span> <span style="color: #DCDCDC">0</span>) <span style="color: #FFFFFF">?</span> <span style="color: #DCDCDC">1</span> <span style="color: #FFFFFF">:</span> <span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">*</span> <span style="color: #DCDCDC">2</span>;
+ <span style="color: #DCDCDC">88</span>          <span style="color: #ffffff">T</span><span style="color: #FFFFFF">*</span> <span style="color: #ffffff">newArray</span> <span style="color: #FFFFFF">=</span> <span style="color: #00FFFF; font-weight: bold">new</span> <span style="color: #ffffff">T</span>[<span style="color: #ffffff">capacity</span>];
+ <span style="color: #DCDCDC">89</span>          <span style="color: #00FFFF; font-weight: bold">for</span> (<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">=</span> <span style="color: #DCDCDC">0</span>; <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">&lt;</span> <span style="color: #ffffff">index</span>; <span style="color: #FFFFFF">++</span><span style="color: #ffffff">i</span>) {
+ <span style="color: #DCDCDC">90</span>              <span style="color: #ffffff">newArray</span>[<span style="color: #ffffff">i</span>] <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">array</span>[<span style="color: #ffffff">i</span>];
+ <span style="color: #DCDCDC">91</span>          }
+ <span style="color: #DCDCDC">92</span>          <span style="color: #ffffff">newArray</span>[<span style="color: #ffffff">index</span>] <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">element</span>;
+ <span style="color: #DCDCDC">93</span>          <span style="color: #00FFFF; font-weight: bold">for</span> (<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">index</span>; <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">&lt;</span> <span style="color: #ffffff">size</span>; <span style="color: #FFFFFF">++</span><span style="color: #ffffff">i</span>) {
+ <span style="color: #DCDCDC">94</span>              <span style="color: #ffffff">newArray</span>[<span style="color: #ffffff">i</span> <span style="color: #FFFFFF">+</span> <span style="color: #DCDCDC">1</span>] <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">array</span>[<span style="color: #ffffff">i</span>];
+ <span style="color: #DCDCDC">95</span>          }
+ <span style="color: #DCDCDC">96</span>          <span style="color: #00FFFF; font-weight: bold">delete</span>[] <span style="color: #ffffff">array</span>;
+ <span style="color: #DCDCDC">97</span>          <span style="color: #ffffff">array</span> <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">newArray</span>;
+ <span style="color: #DCDCDC">98</span>      }
+ <span style="color: #DCDCDC">99</span>      <span style="color: #00FFFF; font-weight: bold">else</span> {
+<span style="color: #DCDCDC">100</span>          <span style="color: #00FFFF; font-weight: bold">for</span> (<span style="color: #00FFFF; font-weight: bold">size_t</span> <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">size</span>; <span style="color: #ffffff">i</span> <span style="color: #FFFFFF">&gt;</span> <span style="color: #ffffff">index</span>; <span style="color: #FFFFFF">--</span><span style="color: #ffffff">i</span>) {
+<span style="color: #DCDCDC">101</span>              <span style="color: #ffffff">array</span>[<span style="color: #ffffff">i</span>] <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">array</span>[<span style="color: #ffffff">i</span> <span style="color: #FFFFFF">-</span> <span style="color: #DCDCDC">1</span>];
+<span style="color: #DCDCDC">102</span>          }
+<span style="color: #DCDCDC">103</span>          <span style="color: #ffffff">array</span>[<span style="color: #ffffff">index</span>] <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">element</span>;
+<span style="color: #DCDCDC">104</span>      }
+<span style="color: #DCDCDC">105</span>      <span style="color: #FFFFFF">++</span><span style="color: #ffffff">size</span>;
+<span style="color: #DCDCDC">106</span>  }
+<span style="color: #DCDCDC">107</span>  
+<span style="color: #DCDCDC">108</span>  <span style="color: #6A9955; font-style: italic">// 移动构造函数</span>
+<span style="color: #DCDCDC">109</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+<span style="color: #DCDCDC">110</span>  <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #ffffff">KVector</span>(<span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&amp;&amp;</span> <span style="color: #ffffff">other</span>) <span style="color: #00FFFF; font-weight: bold">noexcept</span>
+<span style="color: #DCDCDC">111</span>      <span style="color: #FFFFFF">:</span> <span style="color: #ffffff">array</span>(<span style="color: #ffffff">other</span>.<span style="color: #ffffff">array</span>), <span style="color: #ffffff">capacity</span>(<span style="color: #ffffff">other</span>.<span style="color: #ffffff">capacity</span>), <span style="color: #ffffff">size</span>(<span style="color: #ffffff">other</span>.<span style="color: #ffffff">size</span>) {
+<span style="color: #DCDCDC">112</span>      <span style="color: #ffffff">other</span>.<span style="color: #ffffff">array</span> <span style="color: #FFFFFF">=</span> <span style="color: #00FFFF; font-weight: bold">nullptr</span>;
+<span style="color: #DCDCDC">113</span>      <span style="color: #ffffff">other</span>.<span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">=</span> <span style="color: #DCDCDC">0</span>;
+<span style="color: #DCDCDC">114</span>      <span style="color: #ffffff">other</span>.<span style="color: #ffffff">size</span> <span style="color: #FFFFFF">=</span> <span style="color: #DCDCDC">0</span>;
+<span style="color: #DCDCDC">115</span>  }
+<span style="color: #DCDCDC">116</span>  
+<span style="color: #DCDCDC">117</span>  <span style="color: #6A9955; font-style: italic">// 移动赋值运算符</span>
+<span style="color: #DCDCDC">118</span>  <span style="color: #00FFFF; font-weight: bold">template</span><span style="color: #FFFFFF">&lt;</span><span style="color: #00FFFF; font-weight: bold">typename</span> <span style="color: #00FF00; font-weight: bold">T</span><span style="color: #FFFFFF">&gt;</span>
+<span style="color: #DCDCDC">119</span>  <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;&amp;</span> <span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&lt;</span><span style="color: #ffffff">T</span><span style="color: #FFFFFF">&gt;::</span><span style="color: #00FFFF; font-weight: bold">operator</span><span style="color: #FFFFFF">=</span>(<span style="color: #ffffff">KVector</span><span style="color: #FFFFFF">&amp;&amp;</span> <span style="color: #ffffff">other</span>) <span style="color: #00FFFF; font-weight: bold">noexcept</span> {
+<span style="color: #DCDCDC">120</span>      <span style="color: #00FFFF; font-weight: bold">if</span> (<span style="color: #00FFFF; font-weight: bold">this</span> <span style="color: #FFFFFF">!=</span> <span style="color: #FFFFFF">&amp;</span><span style="color: #ffffff">other</span>) {
+<span style="color: #DCDCDC">121</span>          <span style="color: #00FFFF; font-weight: bold">delete</span>[] <span style="color: #ffffff">array</span>;
+<span style="color: #DCDCDC">122</span>          <span style="color: #ffffff">array</span> <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">other</span>.<span style="color: #ffffff">array</span>;
+<span style="color: #DCDCDC">123</span>          <span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">other</span>.<span style="color: #ffffff">capacity</span>;
+<span style="color: #DCDCDC">124</span>          <span style="color: #ffffff">size</span> <span style="color: #FFFFFF">=</span> <span style="color: #ffffff">other</span>.<span style="color: #ffffff">size</span>;
+<span style="color: #DCDCDC">125</span>          <span style="color: #ffffff">other</span>.<span style="color: #ffffff">array</span> <span style="color: #FFFFFF">=</span> <span style="color: #00FFFF; font-weight: bold">nullptr</span>;
+<span style="color: #DCDCDC">126</span>          <span style="color: #ffffff">other</span>.<span style="color: #ffffff">capacity</span> <span style="color: #FFFFFF">=</span> <span style="color: #DCDCDC">0</span>;
+<span style="color: #DCDCDC">127</span>          <span style="color: #ffffff">other</span>.<span style="color: #ffffff">size</span> <span style="color: #FFFFFF">=</span> <span style="color: #DCDCDC">0</span>;
+<span style="color: #DCDCDC">128</span>      }
+<span style="color: #DCDCDC">129</span>      <span style="color: #00FFFF; font-weight: bold">return</span> <span style="color: #FFFFFF">*</span><span style="color: #00FFFF; font-weight: bold">this</span>;
+<span style="color: #DCDCDC">130</span>  }
+</pre></div>

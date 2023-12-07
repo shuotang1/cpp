@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<root>
+    <m_pCppCheckWin>
+       <Widget blackIcon = ":/icons/blackcheck.png" lightIcon = ":/icons/check.png" text = "错误" widget = "KCppCheckWin"/>
+    </m_pCppCheckWin>
+    <m_pSimWin>
+        <Widget blackIcon = ":/icons/blackcopy" lightIcon = ":/icons/copy.png" text = "查重" widget = "KSimWin"/>
+    </m_pSimWin>
+    <m_pCompileWin>
+        <Widget blackIcon = ":/icons/blackrun.png" lightIcon = ":/icons/run.png" text = "编译" widget = "KCompileWin"/>
+    </m_pCompileWin>
+    <m_pGitWin>
+        <Widget blackIcon = ":/icons/blackStore.png" lightIcon = ":/icons/store.png" text = "Git" widget = "KGitWin"/>
+    </m_pGitWin>
+	<m_pFileWin>
+	    <Widget blackIcon = ":/icons/blackfile.png" lightIcon = ":/icons/file.png" text = "显示" widget = "KFileWin"/>
+	</m_pFileWin>
+</root>
