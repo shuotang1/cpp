@@ -29,13 +29,13 @@ void KGitProcess::run()
 	QProcess process; 
 	process.setProcessChannelMode(QProcess::MergedChannels);
 	process.start(exePath, arguments);
-	process.waitForFinished(-1);      //µÈ´ıÖÕ¶ËÊä³öÎŞÏŞÃë
+	process.waitForFinished(-1);      //ç­‰å¾…ç»ˆç«¯è¾“å‡ºæ— é™ç§’
 
 	QByteArray outputData = process.readAll();
-	QTextCodec* codec = QTextCodec::codecForLocale();         //»ñÈ¡µ±Ç°ÏµÍ³±¾µØ±àÂë¶ÔÏó
+	QTextCodec* codec = QTextCodec::codecForLocale();         //è·å–å½“å‰ç³»ç»Ÿæœ¬åœ°ç¼–ç å¯¹è±¡
 	if (codec == nullptr)
 		return;
-	m_output = codec->toUnicode(outputData);            //½«×Ö½ÚÁ÷½âÂëÎªUnicode×Ö·û
+	m_output = codec->toUnicode(outputData);            //å°†å­—èŠ‚æµè§£ç ä¸ºUnicodeå­—ç¬¦
 }
 
 void KGitProcess::checkOrgNameExist(const QString& orgName)
@@ -115,7 +115,7 @@ void KGitProcess::bindUserAndRepo(const QString& orgName)
 void KGitProcess::pullCode(const QString& orgName, const QString& outputDir)
 {
 	m_vec.clear();
-	m_vec.push_back("bindUserAndRepo");
+	m_vec.push_back("pullCode");
 	m_vec.push_back(KGlobalDataNameSpace::m_rootUrl);
 	m_vec.push_back(KGlobalDataNameSpace::m_token);
 	m_vec.push_back("--org_name");
@@ -171,4 +171,4 @@ QString KGitProcess::getOutput()
 }
 
 
-// --TODO set/get·½·¨¿ÉÒÔÓÃproperty½â¾ö
+// --TODO set/getæ–¹æ³•å¯ä»¥ç”¨propertyè§£å†³
